@@ -1,0 +1,10 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: print-hello-task1
+spec:
+  steps:
+    - name: print-hello1
+      image: registry.access.redhat.com/ubi8/ubi
+      script: |
+        echo "Hello from Task 1"
